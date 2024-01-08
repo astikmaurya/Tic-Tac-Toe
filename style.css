@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  height: 50vh;
+  height: 70vh;
   /* padding-top: 5vmin;
   padding-bottom: 5vmin; */
   display: flex;
@@ -18,9 +18,10 @@ body {
 }
 
 .game {
-  height: 70vmin;
-  width: 70vmin;
+  height: 40vmin;
+  width: 40vmin;
   display: grid;
+  padding-bottom: 10vmin;
   /* flex-wrap: wrap; */
   grid-template-columns: auto auto auto;
   grid-gap: 1.5vmin;
@@ -81,9 +82,14 @@ a {
 }
 
 #reset-btn {
-  position: relative;
-  margin: auto;
-  padding: 19px 22px;
+  padding: 1rem;
+  font-size: 1.25rem;
+  /* background-color: black; */
+  color: rgb(148, 42, 0);
+  border-radius: 1rem;
+  border: none;
+  position: center;
+  margin: 1rem;
   transition: all 0.2s ease;
   &:before {
     content: "";
