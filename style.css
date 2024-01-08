@@ -9,20 +9,24 @@ body {
 }
 
 .container {
-  height: 70vh;
+  height: 50vh;
+  /* padding-top: 5vmin;
+  padding-bottom: 5vmin; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .game {
-  height: 60vmin;
-  width: 60vmin;
-  display: flex;
-  flex-wrap: wrap;
+  height: 70vmin;
+  width: 70vmin;
+  display: grid;
+  /* flex-wrap: wrap; */
+  grid-template-columns: auto auto auto;
+  grid-gap: 1.5vmin;
   justify-content: center;
   align-items: center;
-  gap: 1.5vmin;
+  /* gap: 1.5vmin; */
 }
 
 .box {
@@ -35,11 +39,95 @@ body {
   color: brown;
 }
 
-#reset-btn {
+/* #reset-btn {
   padding: 1rem;
   font-size: 1.25rem;
   background-color: black;
   color: aliceblue;
   border-radius: 1rem;
   border: none;
+} */
+
+#new-game {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 1rem;
+  border: none;
+}
+
+#msg {
+  color: rgb(10, 9, 7);
+  font-size: 5vmin;
+}
+
+.msg-container {
+  height: 15vmin;
+  padding: 4vmin;
+}
+
+.hide {
+  display: none;
+}
+
+.gameName {
+  padding: 5vmin;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#reset-btn {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(#ffab9d, 0.5);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+  }
+  span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+      background: rgba(#ffab9d, 1);
+    }
+    svg {
+      transform: translateX(0);
+    }
+  }
+  &:active {
+    transform: scale(0.96);
+  }
 }

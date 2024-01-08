@@ -8,9 +8,15 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="msg-container hide">
+        <p id="msg">Winner</p>
+        <button id="new-game">New Game</button>
+      </div>
+      <div class="gameName">
         <h1>Tic Tac Toe</h1>
         <h3>By <a href="">Astik Maurya</a></h3>
+      </div>
+      <div class="container">
         <div class="game">
           <button class="box"></button>
           <button class="box"></button>
@@ -23,7 +29,15 @@
           <button class="box"></button>
         </div>
       </div>
-      <button id="reset-btn">Reset</button>
+      <!-- Reset Code -->
+      <a href="#" id="reset-btn">
+        <span>Reset Game</span>
+        <svg width="13px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </a>
+      <!-- <button id="reset-btn">Reset</button> -->
     </main>
   </body>
   <script src="app.js"></script>
